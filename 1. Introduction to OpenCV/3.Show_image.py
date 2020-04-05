@@ -5,15 +5,13 @@ Created on Sun Nov 17 11:00:46 2019
 @author: Jaimin
 """
 
-"""
-If you dont understand what to do, please look at this video content I have made for you: https://youtu.be/DUiTKr4xbeg
-
-You can find full course playlist here: https://www.youtube.com/playlist?list=PLwRoxHWReaEhVFjTeKlifKUimbw6ZyV7K
-
-"""
-
 # import opencv
+import cv2
 
 # Read image
+img  = cv2.imread("glasses.jpg")
 
 # Show image
+cv2.imshow("img",img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

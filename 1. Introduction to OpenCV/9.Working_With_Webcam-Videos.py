@@ -5,17 +5,22 @@ Created on Sun Nov 17 11:21:01 2019
 @author: Jaimin
 """
 
-"""
-If you dont understand what to do, please look at this video content I have made for you: https://youtu.be/4h_mM4ueRH4
-
-You can find full course playlist here: https://www.youtube.com/playlist?list=PLwRoxHWReaEhVFjTeKlifKUimbw6ZyV7K
-
-"""
-
-
 # import opencv
+import cv2
 
 # open webcam stream
 
+vs = cv2.VideoCapture("sample.mp4")
 
 # Show frames
+while vs.isOpened():
+    flag, frame = vs.read()
+    if flag:
+        cv2.imshow("Frame",frame)
+        
+    
+    if cv2.waitKey(1) == ord('q'):
+        break
+
+cv2.destroyAllWindows()
+vs.release()

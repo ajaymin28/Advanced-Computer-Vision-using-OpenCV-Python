@@ -5,14 +5,11 @@ Created on Sun Nov 17 10:59:33 2019
 @author: Jaimin
 """
 
-"""
-If you dont understand what to do, please look at this video content i have made for you: https://youtu.be/r21FmE-ftZM
-
-You can find full course playlist here: https://www.youtube.com/playlist?list=PLwRoxHWReaEhVFjTeKlifKUimbw6ZyV7K
-
-"""
-
 # Import opencv
+import cv2
+
+# Read image
+img = cv2.imread("glasses.jpg")
 
 
-# Read image using imread function
+print(img.shape)
